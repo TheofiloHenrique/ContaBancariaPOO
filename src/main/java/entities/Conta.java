@@ -33,15 +33,15 @@ public class Conta {
     }
 
     public void deposito(double novoDeposito){
-        this.saldoConta += novoDeposito;
+        saldoConta += novoDeposito;
     }
 
     public void saque(double novoSaque){
-        this.saldoConta -= novoSaque - 5.00;
+        saldoConta -= novoSaque + 5.0;
     }
 
     public String toString(){
-        return   "Conta: " + getNumeroConta()
+        return  "Conta: " + getNumeroConta()
                 +"\nNome: " + getNomeConta()
                 +"\nSaldo: " + "R$ "+ String.format("%.2f",getSaldoConta());
     }

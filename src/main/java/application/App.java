@@ -28,9 +28,20 @@ public class App {
         }
 
         System.out.println();
-        System.out.println("Informações da Conta:");
+        System.out.printf("Informações da Conta:");
         System.out.println(conta);
 
+        System.out.println();
+        System.out.printf("Faça um depósito: ");
+        double novoDeposito = sc.nextDouble();
+        conta.deposito(novoDeposito);
+        System.out.println(conta);
+
+        System.out.println();
+        System.out.printf("Faça um saque: ");
+        double saque = sc.nextDouble();
+        conta.saque(saque);
+        System.out.println(conta);
 
         sc.close();
     }

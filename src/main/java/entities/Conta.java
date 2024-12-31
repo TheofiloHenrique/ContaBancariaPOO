@@ -10,10 +10,14 @@ public class Conta {
         this.nomeConta = nomeConta;
     }
 
-    public Conta(int numeroConta, String nomeConta, double saldoConta) {
+    public Conta(int numeroConta, String nomeConta, double depositoInicial) {
         this.numeroConta = numeroConta;
         this.nomeConta = nomeConta;
-        this.saldoConta = saldoConta;
+        deposito(depositoInicial);
+    }
+
+    public int getNumeroConta() {
+        return numeroConta;
     }
 
     public String getNomeConta() {
@@ -24,6 +28,10 @@ public class Conta {
         this.nomeConta = nomeConta;
     }
 
+    public double getSaldoConta() {
+        return saldoConta;
+    }
+
     public void deposito(double novoDeposito){
         this.saldoConta += novoDeposito;
     }
@@ -32,5 +40,9 @@ public class Conta {
         this.saldoConta -= novoSaque - 5.00;
     }
 
-
+    public String toString(){
+        return   "Conta: " + getNumeroConta()
+                +"\nNome: " + getNomeConta()
+                +"\nSaldo: " + "R$ "+ String.format("%.2f",getSaldoConta());
+    }
 }
